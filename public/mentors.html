@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Mentors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-green-600 text-white p-6 text-center text-2xl font-bold">
+        Mentor Allocation System
+    </header>
+
+    <nav class="bg-gray-800 text-white p-4 text-center">
+        <a href="student.html" class="mx-4 hover:underline">Home</a>
+        <a href="group-register.html" class="mx-4 hover:underline">Group Register</a>
+        <a href="mentors.html" class="mx-4 hover:underline">Find Mentors</a>
+        <a href="logout.html" class="mx-4 hover:underline text-red-400">Logout</a>
+    </nav>
+
+    <main class="max-w-2xl mx-auto mt-12 p-6 bg-white rounded shadow">
+        <h2 class="text-xl font-bold mb-6">Select a Mentor</h2>
+        <form action="https://formsubmit.co/Yash.107736@stu.upes.ac.in" method="POST">
+            <div class="mb-4">
+                <label class="block mb-2">Choose a Professor:</label>
+                <select id="professorSelect" name="professorSelect" required class="w-full p-2 border rounded">
+                    <option value="" disabled selected>Select a professor</option>
+                    <option value="1">Roohi Sille</option>
+                    <option value="2">Achala Shakya</option>
+                    <option value="3">Mohammad Ahsan</option>
+                    <option value="4">Sonal Talreja</option>
+                    <option value="5">Kotha Venugopalachary</option>
+                    <option value="6">Pranshu Srivastava</option>
+                    <option value="7">Debanjan Ghosh</option>
+                    <option value="8">Pawan Singh Koranga</option>
+                    <option value="9">Rohitesh Ksumar</option>
+                    <option value="10">Suvojit Dhara</option>
+                    <option value="11">Aishik Biswas</option>
+                    <option value="12">Sandeep Chand Kumain</option>
+                    <option value="13">Pragya Katyayan</option>
+                    <option value="14">Upasana</option>
+                    <option value="15">Kaushlendra Kumar Sinha</option>
+                    <option value="16">Rakesh Ranjan</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label class="block mb-2">Your Email:</label>
+                <input type="email" id="email" name="email" required class="w-full p-2 border rounded" placeholder="Enter your email">
+            </div>
+
+            <div class="mb-4">
+                <label class="block mb-2">Your Message:</label>
+                <textarea id="message" name="message" required class="w-full p-2 border rounded" placeholder="Enter your message"></textarea>
+            </div>
+
+            <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 w-full">
+                Send Mail
+            </button>
+        </form>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Mentor Allocation System</p>
+        </div>
+    </footer>
+</body>
+</html>

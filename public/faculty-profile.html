@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mentor Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-green-600 text-white p-6 text-center text-2xl font-bold">
+    Mentor Allocation System
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800 text-white p-4 text-center">
+    <a href="faculty-dashboard.html" class="mx-4 hover:underline">Home</a>
+    <a href="faculty-projects.html" class="mx-4 hover:underline">My Projects</a>
+    <a href="faculty-profile.html" class="mx-4 hover:underline font-semibold">My Profile</a>
+    <a href="logout.html" class="mx-4 hover:underline text-red-400">Logout</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto mt-8 p-6 bg-white rounded shadow">
+    <h2 class="text-2xl font-bold mb-6">Mentor Profile</h2>
+    
+    <!-- Mentor Details Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <!-- Mentor Information Card -->
+      <div class="md:col-span-1 bg-white border rounded-lg shadow-sm p-6">
+        <div class="flex flex-col items-center">
+          <div class="w-32 h-32 rounded-full bg-gray-200 mb-4 overflow-hidden">
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Mentor Photo" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-bold">Dr. Jonathan Whitmore</h3>
+          <p class="text-gray-600">Machine Learning Specialist</p>
+        </div>
+      </div>
+      
+      <!-- Mentor Details -->
+      <div class="md:col-span-2 bg-white border rounded-lg shadow-sm p-6">
+        <h3 class="text-lg font-semibold mb-4">Professional Information</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <p class="text-gray-600">Email:</p>
+            <p class="font-medium">jonathan.whitmore@example.com</p>
+          </div>
+          <div>
+            <p class="text-gray-600">Department:</p>
+            <p class="font-medium">Data Science</p>
+          </div>
+          <div>
+            <p class="text-gray-600">Expertise:</p>
+            <p class="font-medium">Machine Learning, Deep Learning</p>
+          </div>
+          <div>
+            <p class="text-gray-600">Current Projects:</p>
+            <p class="font-medium">3/5 students assigned</p>
+          </div>
+        </div>
+        
+        <h3 class="text-lg font-semibold mt-6 mb-4">Assigned Projects</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center">
+            <i class="fas fa-project-diagram text-green-500 mr-2"></i>
+            <span>Predictive Analytics</span>
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-project-diagram text-green-500 mr-2"></i>
+            <span>Neural Network Optimization</span>
+          </li>
+        </ul>
+        
+        <h3 class="text-lg font-semibold mt-6 mb-4">Bio</h3>
+        <p class="text-gray-700">
+          Dr. Jonathan Whitmore is an associate professor with 10 years of experience in machine learning applications.
+          His research focuses on deep learning architectures and their applications in computer vision.
+          He has mentored over 30 student projects and received the "Excellence in Mentorship" award twice.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Mentorship Stats -->
+    <div class="bg-gray-50 p-6 rounded-lg border">
+      <h3 class="text-lg font-semibold mb-4">Mentorship Statistics</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-white p-4 rounded border">
+          <p class="text-gray-600">Total Projects Mentored</p>
+          <p class="text-2xl font-bold">32</p>
+        </div>
+        <div class="bg-white p-4 rounded border">
+          <p class="text-gray-600">Current Projects</p>
+          <p class="text-2xl font-bold">2</p>
+        </div>
+        <div class="bg-white p-4 rounded border">
+          <p class="text-gray-600">Student Satisfaction</p>
+          <p class="text-2xl font-bold">4.7/5.0</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-4 mt-8 text-center">
+    <p>&copy; 2025 Mentor Allocation System</p>
+  </footer>
+</body>
+</html>

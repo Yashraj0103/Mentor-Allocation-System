@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard - Mentor Allocation System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <header class="bg-green-600 text-white p-6 text-center text-2xl font-bold">
+    Mentor Allocation System
+  </header>
+
+  <nav class="bg-gray-800 text-white p-4 text-center">
+    <a href="student.html" class="mx-4 hover:underline">Home</a>
+    <a href="group-register.html" class="mx-4 hover:underline">Group Register</a>
+    <a href="mentors.html" class="mx-4 hover:underline">Find Mentors</a>
+    <a href="login.html" class="mx-4 hover:underline text-red-400">Logout</a>
+  </nav>
+
+  <main class="max-w-2xl mx-auto mt-12 p-6 bg-white rounded shadow">
+    <h2 class="text-xl font-bold mb-6">Student Portal</h2>
+    <form id="mentorRequestForm">
+      <div class="mb-4">
+        <label class="block mb-2">Student Name:</label>
+        <input type="text" id="studentName" class="w-full p-2 border rounded" required />
+      </div>
+
+      <div class="mb-4">
+        <label class="block mb-2">Project Topic:</label>
+        <textarea id="projectTopic" class="w-full p-2 border rounded" required></textarea>
+      </div>
+
+      <div class="mb-4">
+        <label class="block mb-2">Select Mentor:</label>
+        <select id="mentorSelect" class="w-full p-2 border rounded" required>
+          <option value="">-- Select Mentor --</option>
+                    <option value="1">Roohi Sille</option>
+                    <option value="2">Achala Shakya</option>
+                    <option value="3">Mohammad Ahsan</option>
+                    <option value="4">Sonal Talreja</option>
+                    <option value="5">Kotha Venugopalachary</option>
+                    <option value="6">Pranshu Srivastava</option>
+                    <option value="7">Debanjan Ghosh</option>
+                    <option value="8">Pawan Singh Koranga</option>
+                    <option value="9">Rohitesh Ksumar</option>
+                    <option value="10">Suvojit Dhara</option>
+                    <option value="11">Aishik Biswas</option>
+                    <option value="12">Sandeep Chand Kumain</option>
+                    <option value="13">Pragya Katyayan</option>
+                    <option value="14">Upasana</option>
+                    <option value="15">Kaushlendra Kumar Sinha</option>
+                    <option value="16">Rakesh Ranjan</option>
+        </select>
+      </div>
+
+      <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+        Request Mentor
+      </button>
+
+      <p id="successMessage" class="text-green-600 mt-4 hidden">Mentor requested successfully!</p>
+    </form>
+  </main>
+<footer class="bg-gray-800 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Mentor Allocation System</p>
+        </div>
+    </footer>
+  <script src="student.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faculty Portal - My Accepted Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-green-600 text-white p-6 text-center text-2xl font-bold">
+    Mentor Allocation System
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800 text-white p-4 text-center">
+    <a href="faculty-dashboard.html" class="mx-4 hover:underline">Home</a>
+    <a href="faculty-projects.html" class="mx-4 hover:underline font-semibold">My Projects</a>
+    <a href="faculty-profile.html" class="mx-4 hover:underline">My Profile</a>
+    <a href="logout.html" class="mx-4 hover:underline text-red-400">Logout</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto mt-8 p-6 bg-white rounded shadow">
+    <h2 class="text-2xl font-bold mb-6">My Accepted Projects</h2>
+
+    <!-- Project Status Summary -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+      <div class="bg-blue-50 p-4 rounded border border-blue-200">
+        <h3 class="text-lg font-semibold text-blue-800">Total Accepted</h3>
+        <p class="text-3xl font-bold text-blue-600">4</p>
+      </div>
+      <div class="bg-green-50 p-4 rounded border border-green-200">
+        <h3 class="text-lg font-semibold text-green-800">Active Projects</h3>
+        <p class="text-3xl font-bold text-green-600">3</p>
+      </div>
+      <div class="bg-purple-50 p-4 rounded border border-purple-200">
+        <h3 class="text-lg font-semibold text-purple-800">Completed</h3>
+        <p class="text-3xl font-bold text-purple-600">1</p>
+      </div>
+    </div>
+
+    <!-- Accepted Projects Table -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full border">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border p-2 text-left">Student Name</th>
+            <th class="border p-2 text-left">Project Topic</th>
+            <th class="border p-2 text-left">Domain</th>
+            <th class="border p-2 text-left">Start Date</th>
+            <th class="border p-2 text-left">Status</th>
+            <th class="border p-2 text-left">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover:bg-gray-50">
+            <td class="border p-2">John Doe</td>
+            <td class="border p-2">AI in Education</td>
+            <td class="border p-2">Artificial Intelligence</td>
+            <td class="border p-2">15/03/2025</td>
+            <td class="border p-2">
+              <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Active</span>
+            </td>
+            <td class="border p-2">
+              <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 mr-2">
+                <i class="fas fa-eye mr-1"></i>View
+              </button>
+              <button class="bg-gray-600 text-white px-3 py-1 rounded hover:bg-gray-700">
+                <i class="fas fa-comment mr-1"></i>Message
+              </button>
+            </td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="border p-2">Jane Smith</td>
+            <td class="border p-2">Blockchain for Healthcare</td>
+            <td class="border p-2">Data Science</td>
+            <td class="border p-2">22/02/2025</td>
+            <td class="border p-2">
+              <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Active</span>
+            </td>
+            <td class="border p-2">
+              <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 mr-2">
+                <i class="fas fa-eye mr-1"></i>View
+              </button>
+              <button class="bg-gray-600 text-white px-3 py-1 rounded hover:bg-gray-700">
+                <i class="fas fa-comment mr-1"></i>Message
+              </button>
+            </td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="border p-2">Robert Johnson</td>
+            <td class="border p-2">Predictive Analytics for Retail</td>
+            <td class="border p-2">Machine Learning</td>
+            <td class="border p-2">10/01/2025</td>
+            <td class="border p-2">
+              <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Active</span>
+            </td>
+            <td class="border p-2">
+              <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 mr-2">
+                <i class="fas fa-eye mr-1"></i>View
+              </button>
+              <button class="bg-gray-600 text-white px-3 py-1 rounded hover:bg-gray-700">
+                <i class="fas fa-comment mr-1"></i>Message
+              </button>
+            </td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="border p-2">Emily Wilson</td>
+            <td class="border p-2">Computer Vision for Agriculture</td>
+            <td class="border p-2">Artificial Intelligence</td>
+            <td class="border p-2">05/12/2024</td>
+            <td class="border p-2">
+              <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-medium">Completed</span>
+            </td>
+            <td class="border p-2">
+              <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 mr-2">
+                <i class="fas fa-eye mr-1"></i>View
+              </button>
+              <button class="bg-gray-600 text-white px-3 py-1 rounded hover:bg-gray-700">
+                <i class="fas fa-comment mr-1"></i>Message
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Project Timeline Section -->
+    <div class="mt-12">
+      <h3 class="text-xl font-bold mb-6">Project Timeline</h3>
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-4 h-full w-0.5 bg-gray-300"></div>
+        
+        <!-- Timeline items -->
+        <div class="relative mb-8 pl-12">
+          <div class="absolute left-0 w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white">
+            <i class="fas fa-check"></i>
+          </div>
+          <div class="bg-gray-50 p-4 rounded border border-gray-200">
+            <h4 class="font-semibold">Computer Vision for Agriculture</h4>
+            <p class="text-sm text-gray-600">Completed on 15/05/2025</p>
+            <p class="mt-2 text-sm">Project successfully completed and submitted for final evaluation.</p>
+          </div>
+        </div>
+        
+        <div class="relative mb-8 pl-12">
+          <div class="absolute left-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="bg-gray-50 p-4 rounded border border-gray-200">
+            <h4 class="font-semibold">AI in Education</h4>
+            <p class="text-sm text-gray-600">In progress - Due 30/07/2025</p>
+            <p class="mt-2 text-sm">Currently in the implementation phase with prototype development underway.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-4 mt-8 text-center">
+    <p>&copy; 2025 Mentor Allocation System</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faculty Portal - Mentor Allocation System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-green-600 text-white p-6 text-center text-2xl font-bold">
+    Mentor Allocation System
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800 text-white p-4 text-center">
+    <a href="faculty-dashboard.html" class="mx-4 hover:underline font-semibold">Home</a>
+    <a href="faculty-projects.html" class="mx-4 hover:underline">My Projects</a>
+    <a href="faculty-profile.html" class="mx-4 hover:underline">My Profile</a>
+    <a href="logout.html" class="mx-4 hover:underline text-red-400">Logout</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto mt-8 p-6 bg-white rounded shadow">
+    <h2 class="text-xl font-bold mb-6">Project Approval Requests</h2>
+
+    <!-- Expertise Filter -->
+    <div class="mb-6">
+      <label class="block text-gray-700 mb-2">Filter by My Expertise:</label>
+      <select id="expertiseFilter" class="w-full p-2 border rounded">
+        <option value="all">All Projects</option>
+        <option value="ai">Artificial Intelligence</option>
+        <option value="ml">Machine Learning</option>
+        <option value="ds">Data Science</option>
+      </select>
+    </div>
+
+    <!-- Project Approval Table -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full border">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border p-2 text-left">Student Name</th>
+            <th class="border p-2 text-left">Project Topic</th>
+            <th class="border p-2 text-left">Project Domain</th>
+            <th class="border p-2 text-left">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover:bg-gray-50">
+            <td class="border p-2">John Doe</td>
+            <td class="border p-2">AI in Education</td>
+            <td class="border p-2">Artificial Intelligence</td>
+            <td class="border p-2">
+              <button onclick="handleProjectDecision(this, 'accept')" 
+                      class="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 mr-2">
+                <i class="fas fa-check mr-1"></i>Accept
+              </button>
+              <button onclick="handleProjectDecision(this, 'reject')" 
+                      class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
+                <i class="fas fa-times mr-1"></i>Reject
+              </button>
+            </td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="border p-2">Jane Smith</td>
+            <td class="border p-2">Blockchain for Healthcare</td>
+            <td class="border p-2">Data Science</td>
+            <td class="border p-2">
+              <button onclick="handleProjectDecision(this, 'accept')" 
+                      class="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 mr-2">
+                <i class="fas fa-check mr-1"></i>Accept
+              </button>
+              <button onclick="handleProjectDecision(this, 'reject')" 
+                      class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
+                <i class="fas fa-times mr-1"></i>Reject
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Accepted Projects Section -->
+    <div class="mt-8">
+      <h3 class="text-lg font-semibold mb-4">My Accepted Projects</h3>
+      <div class="bg-gray-50 p-4 rounded">
+        <p class="text-gray-600">No projects accepted yet</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-4 mt-8 text-center">
+    <p>&copy; 2025 Mentor Allocation System</p>
+  </footer>
+
+  <script>
+    // Handle project acceptance/rejection
+    function handleProjectDecision(button, decision) {
+      const row = button.closest('tr');
+      const studentName = row.cells[0].textContent;
+      const projectTopic = row.cells[1].textContent;
+      
+      if (decision === 'accept') {
+        // Add to accepted projects
+        const acceptedSection = document.querySelector('.bg-gray-50');
+        acceptedSection.innerHTML = `
+          <div class="border-b pb-2 mb-2">
+            <h4 class="font-medium">${studentName}</h4>
+            <p class="text-sm text-gray-600">${projectTopic}</p>
+          </div>
+        `;
+        
+        // Update table row
+        row.cells[3].innerHTML = `
+          <span class="text-green-600 font-semibold">Accepted</span>
+        `;
+        
+        alert(`You have accepted ${studentName}'s project: ${projectTopic}`);
+      } else {
+        // Handle rejection
+        row.cells[3].innerHTML = `
+          <span class="text-red-600 font-semibold">Rejected</span>
+        `;
+        alert(`You have rejected ${studentName}'s project: ${projectTopic}`);
+      }
+    }
+
+    // Filter projects by expertise
+    document.getElementById('expertiseFilter').addEventListener('change', function() {
+      const filterValue = this.value;
+      const rows = document.querySelectorAll('tbody tr');
+      
+      rows.forEach(row => {
+        const domain = row.cells[2].textContent.toLowerCase();
+        if (filterValue === 'all' || domain.includes(filterValue)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

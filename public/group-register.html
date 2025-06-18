@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-green-600 text-white p-6 text-center text-2xl font-bold">
+        Mentor Allocation System
+    </header>
+
+    <nav class="bg-gray-800 text-white p-4 text-center">
+        <a href="student.html" class="mx-4 hover:underline">Home</a>
+        <a href="group-register.html" class="mx-4 hover:underline">Group Register</a>
+        <a href="mentors.html" class="mx-4 hover:underline">Find Mentors</a>
+        <a href="logout.html" class="mx-4 hover:underline text-red-400">Logout</a>
+    </nav>
+
+    <main class="max-w-2xl mx-auto mt-12 p-6 bg-white rounded shadow">
+        <h2 class="text-xl font-bold mb-6">Group Registration</h2>
+        <form id="groupRegisterForm">
+            <div class="mb-4">
+                <label class="block mb-2">Group Name:</label>
+                <input type="text" id="groupName" name="groupName" class="w-full p-2 border rounded" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="block mb-2">Group Leader Name:</label>
+                <input type="text" id="groupLeader" name="groupLeader" class="w-full p-2 border rounded" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="block mb-2">SAP ID:</label>
+                <input type="text" id="sapId" name="sapId" class="w-full p-2 border rounded" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="block mb-2">Number of Members:</label>
+                <input type="number" id="membersCount" name="membersCount" min="1" class="w-full p-2 border rounded" required>
+            </div>
+
+            <div id="membersContainer" class="mb-4">
+                <!-- Member details will be added here -->
+            </div>
+
+            <div class="flex space-x-4">
+                <button type="button" id="addMemberButton" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                    Add Member
+                </button>
+                <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+                    Register Group
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Mentor Allocation System</p>
+        </div>
+    </footer>
+    </body>
+    </html>
