@@ -1,4 +1,5 @@
 Mentor Allocation System
+
 The Mentor Allocation System is a web application designed to automate the process of assigning mentors to mentees based on preferences, skills, and availability — with a simple, responsive UI and a lightweight JavaScript backend.
 
 🚀 Features
@@ -27,7 +28,7 @@ Clone the repository:
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/mentor-allocation-system.git
+git clone https://github.com/Yashraj0103/mentor-allocation-system.git
 cd mentor-allocation-system
 (Optional — if using Node backend): Install dependencies
 
