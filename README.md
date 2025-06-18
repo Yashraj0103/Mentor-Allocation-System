@@ -1,4 +1,4 @@
-Mentor Allocation System
+**Mentor Allocation System**
 
 The Mentor Allocation System is a web application designed to automate the process of assigning mentors to mentees based on preferences, skills, and availability — with a simple, responsive UI and a lightweight JavaScript backend.
 
